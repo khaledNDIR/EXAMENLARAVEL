@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('date'); // Ajoute une colonne 'date' de type date
             $table->time('heure'); // Ajoute une colonne 'heure' de type time
             $table->integer('nombre_place'); // Ajoute une colonne 'nombre_place' de type entier
+            $table->unsignedBigInteger('idCategorie')->index();
             $table->timestamps(); // Ajoute automatiquement les colonnes 'created_at' et 'updated_at' pour la gestion des timestamps   
         });
     }

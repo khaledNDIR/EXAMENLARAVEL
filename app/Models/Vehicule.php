@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Categorie;   
 
 class Vehicule extends Model
 {
@@ -16,4 +17,9 @@ class Vehicule extends Model
         'image',
         'idCategorie',
     ];
+
+    public function categorie()
+    {
+        return $this->belongsTo(Categorie::class, 'idCategorie');
+    }
 }

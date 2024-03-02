@@ -1,0 +1,30 @@
+.apropos{
+    border-radius: 10px;
+    height: 300px;
+    z-index: 1;
+    box-shadow: 8px 0px 20px 0px rgb(236, 226, 226);
+    margin-top: -100px;
+}
+
+.apropose{
+    border-radius: 10px;
+    height: auto;
+    z-index: 1;
+    box-shadow: 8px 0px 20px 0px rgb(236, 226, 226);
+    margin-top: -400px;
+}
+
+
+.ssl{
+    z-index: -1;
+}
+
+.in{
+      z-index: 1;
+}
+
+body {
+        src: url("../font/Lato-Regular.eot");
+        src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+        background-color: rgb(240, 249, 255);
+}

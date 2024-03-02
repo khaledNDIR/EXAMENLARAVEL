@@ -24,10 +24,12 @@
                                         </div>
                                     </div>                             
                                 </div>
-                                <div class="footer">
+                                <div class="footer text-center">
                                     <hr />
-                                    <div class="stats">
-                                        <i class="fas fa-calendar"></i> For this Week
+                                    <div class="stats  ">
+                                        <span class="badge  bg-primary">
+                                            {{ $nombreVehiculesPoidsLeger }}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -43,10 +45,10 @@
                                         </div>
                                     </div>                             
                                 </div>
-                                <div class="footer">
+                                <div class="footer text-center">
                                     <hr />
                                     <div class="stats">
-                                        <i class="fas fa-calendar"></i> For this Week
+                                     <span align="center" class="badge  bg-primary">{{ $nombreVehiculesPoidsLourd }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -62,10 +64,12 @@
                                         </div>
                                     </div>                             
                                 </div>
-                                <div class="footer">
+                                <div class="footer text-center">
                                     <hr />
                                     <div class="stats">
-                                        <i class="fas fa-calendar"></i> For this Week
+                                        <span class="badge  bg-primary">
+                                             0
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -81,10 +85,12 @@
                                         </div>
                                     </div>                             
                                 </div>
-                                <div class="footer">
+                                <div class="footer text-center">
                                     <hr />
                                     <div class="stats">
-                                        <i class="fas fa-calendar"></i> For this Week
+                                        <span class="badge  bg-primary">
+                                             0
+                                        </span>
                                     </div>
                                 </div>
                             </div>

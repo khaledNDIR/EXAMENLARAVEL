@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AcceuilController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChauffeurController;
 use App\Http\Controllers\VehiculeController;
 use Illuminate\Support\Facades\Route;
@@ -18,15 +20,11 @@ use SebastianBergmann\CodeCoverage\Node\CrapIndex;
 
 
 
-Route::get('/accueil', function () {
-    return view('frontEnd.index');
-});
+Route::get('/accueil', [AcceuilController::class,'index']);
 
 
 /////PARTIE ADMIN
-Route::get('/', function () {
-    return view('admin.indexAdmin');
-});
+Route::get('/', [AdminController::class,'index']);
 //VEHICULE
 Route::get('/vehicule', [VehiculeController::class,'index'])->name('VH');
 Route::post('/vehicule',[VehiculeController::class,'store'])->name('ajoutVehicule');
@@ -41,3 +39,9 @@ Route::delete('/chauffeur/{chauffeur}',[ChauffeurController::class,'destroy'])->
 Route::get('/client', function () {
     return view('admin.client');
 });
+
+Route::get('/trajet1',[AdminController::class,'indexTrajet'] );
+
+Route::post('/trajet', [AdminController::class,'store'])->name('trajetTab');
+
+Route::get('/reservation', [AcceuilController::class,'inReserve']);

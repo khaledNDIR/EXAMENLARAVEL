@@ -1,6 +1,6 @@
 <nav id="sidebar" class="active">
     <div class="sidebar-header ">
-        <h4><b>YOBALEMA</b></h4>
+        <h4><b>YO|</b>voyage</h4>
     </div>
     <ul class="list-unstyled components text-secondary">
         <li>
@@ -16,7 +16,7 @@
             <a href="/client"><i class="fas fa-users"></i> Client</a>
         </li>  
         <li>
-            <a href="/client"><i class="fas fa-money-bill-alt"></i> Bilan</a>
+            <a href="/trajet1"><i class="fas fa-map-marked-alt"></i> Trajet</a>
         </li>  
     </ul>
 </nav>

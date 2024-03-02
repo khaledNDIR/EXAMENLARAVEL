@@ -17,61 +17,124 @@
                   <div class="row">
                      <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
                          <div class="card">
+                            <div class="card-header">
+                                <span class="card-title" >Vehicules Disponible</span>
+                            </div>
                              <div class="content">
-                                 <div class="row">
-                                     <div class="">
-                                         <div class="icon-big text-center">
-                                             <i class="teal fas fa-car"></i>
-                                         </div>
-                                     </div>                             
-                                 </div>
-                                 <div class="footer">
-                                     <hr />
-                                     <div class="stats">
-                                         <i class="fas fa-calendar"></i> For this Week
-                                     </div>
-                                 </div>
-                             </div>
+                                <div class="row">
+                                  <div class="col-6">
+                                          <div class="">
+                                                <div class="icon-big text-center">
+                                                    <i class="teal fas fa-car"></i>
+                                                </div>
+                                            </div>                             
+                                         
+                                        <div class="footer">
+                                            <hr />
+                                            <div class="stats">
+                                                <i class="fas fa-calendar"></i> For this Week
+                                            </div>
+                                        </div>
+                                  </div>
+                                  <div class="col-6">
+                                          <div class="">
+                                                <div class="icon-big text-center">
+                                                    <i class="teal fas fa-truck"></i>
+                                                </div>
+                                            </div>                             
+                                         
+                                        <div class="footer">
+                                            <hr />
+                                            <div class="stats">
+                                                <i class="fas fa-calendar"></i> For this Week
+                                            </div>
+                                        </div>
+                                  </div>
+                                </div>
+                                </div>
                          </div>
+
                      </div>
                      <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
-                         <div class="card">
-                             <div class="content">
-                                 <div class="row">
-                                     <div class="">
-                                         <div class="icon-big text-center">
-                                             <i class="teal fas fa-truck"></i>
-                                         </div>
-                                     </div>                             
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title" >Vehicules sur le terrain</span>
+                            </div>
+                            <div class="content">
+                               <div class="row">
+                                 <div class="col-6">
+                                         <div class="">
+                                               <div class="icon-big text-center">
+                                                   <i class="teal fas fa-car"></i>
+                                               </div>
+                                           </div>                             
+                                        
+                                       <div class="footer">
+                                           <hr />
+                                           <div class="stats">
+                                               <i class="fas fa-calendar"></i> For this Week
+                                           </div>
+                                       </div>
                                  </div>
-                                 <div class="footer">
-                                     <hr />
-                                     <div class="stats">
-                                         <i class="fas fa-calendar"></i> For this Week
-                                     </div>
+                                 <div class="col-6">
+                                         <div class="">
+                                               <div class="icon-big text-center">
+                                                   <i class="teal fas fa-truck"></i>
+                                               </div>
+                                           </div>                             
+                                        
+                                       <div class="footer">
+                                           <hr />
+                                           <div class="stats">
+                                               <i class="fas fa-calendar"></i> For this Week
+                                           </div>
+                                       </div>
                                  </div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
-                         <div class="card">
-                             <div class="content">
-                                 <div class="row">
-                                     <div class="">
-                                         <div class="icon-big text-center">
-                                             <i class="teal fas fa-user-tie"></i>
-                                         </div>
-                                     </div>                             
+                               </div>
+                               </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4 mt-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title" >Vehicules en panne</span>
+                            </div>
+                            <div class="content">
+                               <div class="row">
+                                 <div class="col-6">
+                                         <div class="">
+                                               <div class="icon-big text-center">
+                                                   <i class="teal fas fa-car"></i>
+                                               </div>
+                                           </div>                             
+                                        
+                                       <div class="footer">
+                                           <hr />
+                                           <div class="stats">
+                                               <i class="fas fa-calendar"></i> For this Week
+                                           </div>
+                                       </div>
                                  </div>
-                                 <div class="footer">
-                                     <hr />
-                                     <div class="stats">
-                                         <i class="fas fa-calendar"></i> For this Week
-                                     </div>
+                                 <div class="col-6">
+                                         <div class="">
+                                               <div class="icon-big text-center">
+                                                   <i class="teal fas fa-truck"></i>
+                                               </div>
+                                           </div>                             
+                                        
+                                       <div class="footer">
+                                           <hr />
+                                           <div class="stats">
+                                               <i class="fas fa-calendar"></i> For this Week
+                                           </div>
+                                       </div>
                                  </div>
-                             </div>
-                         </div>
-                     </div>                  
+                               </div>
+                               </div>
+                        </div>
+
+                    </div>                 
                   </div>
                     <hr>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCandidatModal">
