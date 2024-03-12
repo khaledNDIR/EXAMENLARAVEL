@@ -36,12 +36,14 @@ Route::post('/chauffeur',[ChauffeurController::class,'store'])->name('ajoutChauf
 Route::put('/chauffeur/{chauffeur}',[ChauffeurController::class,'update'])->name('updateChauffeur');
 Route::delete('/chauffeur/{chauffeur}',[ChauffeurController::class,'destroy'])->name('deleteChauffeur');
 
-Route::get('/client', function () {
-    return view('admin.client');
-});
+Route::get('/client',[AdminController::class,'infoClient'])->name('client');
+Route::post('/client', [AcceuilController::class,'storeAll'])->name('infoClient');
 
+Route::get('/facture',[AcceuilController::class,'facture'])->name('factures');
+Route::get('/reservation/{trajet_id}', [AcceuilController::class,'inReserve'])->name('reservation');
 Route::get('/trajet1',[AdminController::class,'indexTrajet'] );
-
 Route::post('/trajet', [AdminController::class,'store'])->name('trajetTab');
 
-Route::get('/reservation', [AcceuilController::class,'inReserve']);
+Route::post('/evaluation', [ChauffeurController::class,'commentaire'])->name('evaluer');
+
+Route::get('/avis', [AcceuilController::class,'avis'])->name('avis');

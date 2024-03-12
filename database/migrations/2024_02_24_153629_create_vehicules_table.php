@@ -20,7 +20,7 @@ return new class extends Migration
         $table->integer('KM_defaut'); // Ajoute une colonne 'KM_defaut' de type entier
         $table->string('matricule'); // Ajoute une colonne 'matricule' de type chaîne de caractères
         $table->string('image')->nullable();
-        $table->boolean('surTerrain')->nullable();
+        $table->boolean('surTerrain')->default(false);
         $table->unsignedBigInteger('idCategorie')->index(); // Ajoute une colonne 'idCategorie' de type entier non signé
         // $table->foreign('idCategorie')->references('id')->on('categories')->onDelete('cascade');
         $table->timestamps(); // Ajoute automatiquement les colonnes 'created_at' et 'updated_at' pour la gestion des timestamps

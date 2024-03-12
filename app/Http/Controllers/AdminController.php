@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chauffeur;
+use App\Models\Client;
 use App\Models\Trajet;
 use App\Models\Vehicule;
 use Illuminate\Http\Request;
@@ -9,16 +11,22 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index() {
-        $nombreVehiculesPoidsLeger = Vehicule::where('idCategorie', 1)->count();
+        $nombreVehiculesPoidsLeger = Vehicule::where('idCategorie', 2)->count();
         
 
         // Obtenir le nombre de véhicules poids lourd
-        $nombreVehiculesPoidsLourd = Vehicule::where('idCategorie', 2)->count();
+        $nombreVehiculesPoidsLourd = Vehicule::where('idCategorie', 1)->count();
+
+        $client = Client::all()->count();
+        $chauffeur = Chauffeur::all()->count();
+
           
     
         return view('admin.indexAdmin', [
             'nombreVehiculesPoidsLeger' => $nombreVehiculesPoidsLeger,
             'nombreVehiculesPoidsLourd' => $nombreVehiculesPoidsLourd,
+            'clients' => $client,
+            'chauffeurs' => $chauffeur
         ]);
     }
 
@@ -55,5 +63,12 @@ class AdminController extends Controller
         $itineraire->save();
         
         return back();
+    }
+
+    public function infoClient(){
+        
+       $client = Client::all();
+
+       return view('admin.client',['clients' => $client ]);
     }
 }

@@ -1,6 +1,6 @@
 <nav id="sidebar" class="active">
     <div class="sidebar-header ">
-        <h4><b>YO|</b>voyage</h4>
+        <h4><b class="text-warning">YO|</b>voyage</h4>
     </div>
     <ul class="list-unstyled components text-secondary">
         <li>

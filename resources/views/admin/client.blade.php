@@ -28,16 +28,34 @@
                                             <th>ID</th>
                                             <th>Nom</th>
                                             <th>Prénom</th>
-                                            <th>Expérience</th>
-                                            <th>Numéro de permis</th>
-                                            <th>Date d'émission</th>
-                                            <th>Date d'expiration</th>
-                                            <th>Deplacement</th>
-                                            <th>Actions</th>
+                                            <th>Telephone</th>
+                                            <th>Adresse</th>
+                                            <th>Date</th>
+                                            <th>Heure</th>
+                                            <th>Nombre De Place</th>
+                                            <th>Categorie</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                  
+                                     @foreach ($clients as $client)
+                                       <tr>
+                                        <td>{{ $client->id }}</td>
+                                        <td>{{ $client->nom }}</td>
+                                        <td>{{ $client->prenom }}</td>
+                                        <td>{{ $client->telephone }}</td>
+                                        <td>{{ $client->adresse }}</td>
+                                        <td>{{ $client->date }}</td>
+                                        <td>{{ $client->heure }}</td>
+                                        <td>{{ $client->nombre_place }}</td>
+                                        <td>{{ $client->idCategorie }}</td>
+                                        
+                                        <td>
+                                            <button type="submit" class="btn btn-warning">Modifier</button>
+                                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                                        </td>
+                                       </tr>  
+                                     @endforeach
                                     </tbody>
                                 </table>
 

@@ -17,9 +17,31 @@ class VehiculeController extends Controller
     {
         $categorie = Categorie::all();
         $vehicule = Vehicule::all();
+        $nbrPLegerDispo = Vehicule::where('idCategorie', 2) 
+                                     ->where('surTerrain', false)  
+                                     ->count();
+        $nbrPLourDispo = Vehicule::where('idCategorie', 1) 
+                                    ->where('surTerrain', false)  
+                                    ->count();
+
+        $nbrPLegerST = Vehicule::where('idCategorie', 2) 
+                                     ->where('surTerrain', true)  
+                                     ->count();
+        $nbrPLourST = Vehicule::where('idCategorie', 1) 
+                                        ->where('surTerrain', true)  
+                                        ->count();
         
 
-        return view('admin.vehicule',['categories' => $categorie ,'vehicules'  => $vehicule]);
+        return view('admin.vehicule',
+        [
+         'vehicules' => $vehicule, 
+         'categories' => $categorie ,
+         'nbrPLegerDispo'  => $nbrPLegerDispo,
+         'nbrPLourdDispo'   => $nbrPLourDispo,
+         'nbrPLegerST'     => $nbrPLegerST,
+         'nbrPLourdST'      => $nbrPLourST
+        
+        ]);
     }
 
     /**

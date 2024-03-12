@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\categorie;
 use App\Models\Chauffeur;
+use App\Models\Commentaire;
 use Illuminate\Http\Request;
 
 class ChauffeurController extends Controller
@@ -27,9 +28,20 @@ class ChauffeurController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function commentaire(Request $request)
     {
-        //
+         
+    
+        // Créer un nouveau commentaire
+        $commentaire = new Commentaire();
+        $commentaire->chaufffeur = $request->input('nom_prenom_chauffeur');
+        $commentaire->commentaire = $request->input('commentaire');
+        $commentaire->note =  $request->input('note');
+        
+        $commentaire->save();
+
+        // Redirection avec un message de succès
+        return redirect()->back()->with('success', 'Le commentaire a été ajouté avec succès.');
     }
 
     /**

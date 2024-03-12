@@ -28,7 +28,7 @@
                         <a class="nav-link" href="#">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">À Propos</a>
+                        <a class="nav-link" href="{{route('avis')}}">Avis Client</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -70,54 +70,32 @@
 
     <!-- Contenu du corps -->
     <div class="container mt-5">
-        <div class="row bg-white apropose">
-            <div class="col-sm-6 col-md-6 col-lg-8 mt-3">
-                <form action="{{ route('infoClient') }}" method="POST">
-                    @csrf
-                    <div class="form-group">
-                        <label for="nom">Nom:</label>
-                        <input type="text" class="form-control" id="nom" name="nom">
-                    </div>
-                    <div class="form-group">
-                        <label for="prenom">Prénom:</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom">
-                    </div>
-                    <div class="form-group">
-                        <label for="telephone">Téléphone:</label>
-                        <input type="text" class="form-control" id="telephone" name="telephone">
-                    </div>
-                    <div class="form-group">
-                        <label for="adresse">Adresse:</label>
-                        <input type="text" class="form-control" id="adresse" name="adresse">
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date:</label>
-                        <input type="date" class="form-control" id="date" name="date">
-                    </div>
-                    <div class="form-group">
-                        <label for="heure">Heure:</label>
-                        <input type="time" class="form-control" id="heure" name="heure">
-                    </div>
-                    <div class="form-group">
-                        <label for="nombre_place">Nombre de place:</label>
-                        <input type="number" class="form-control" id="nombre_place" name="nombre_place">
-                    </div>
-                    <div class="form-group">
-                        <label for="idCategorie">Catégorie:</label>
-                        <select class="form-control" id="idCategorie" name="idCategorie">
-                            @foreach ($categories as $categorie)
-                                <option value="{{ $categorie->id }}">{{ $categorie->nomCat }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                     
-
-                    <input type="hidden" name="trajet_id" value="{{ isset($trajet_id) ? $trajet_id : '' }}">
-
-
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
-                </form>
-            </div>
+        <div class="card bg-white aproposee">
+            
+                <h5 class="card-header"><b>Facture</b></h5>
+                <div class="card-body">
+                    <p class="card-text">
+                        <h6>
+                            <b>
+                             <ul>
+                                <li>Nom / Prénom: {{ $reservation->client->nom }} {{ $reservation->client->prenom }}</li>
+                                <li>Date: {{ $reservation->created_at->format('d/m/Y H:i') }}</li>
+                                <li>Nombre de places: {{ $reservation->nombre_place }}</li>
+                                <li>Trajet: {{ $reservation->trajet->trajet }}</li>
+                                <li>Vehicule: {{ $reservation->client->idCategorie }}</li>
+                                <li>Nombre de places: {{ $reservation->nombre_place }}</li>
+                            {{-- <li>Véhicule: {{ $reservation->idCategorie->nom }}</li> <!-- Assurez-vous d'ajuster cela en fonction de votre modèle Vehicule --> --}}
+                             </ul>
+                            </b>
+                        </h6>
+                       
+                    </p>
+                 </div>
+                <div class="card-footer text-end">
+                    <h4><b>Montant :{{ $reservation->trajet->tarif }} </b></h4>
+                    <button class="btn btn-primary">Payer</button>
+                </div>
+            
         </div>
     </div>
 

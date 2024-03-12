@@ -69,7 +69,10 @@
                                             <td>{{ $itineraire->trajet }}</td>
                                             <td>{{ $itineraire->tarif }}</td>
                                             <td>
-                                                <!-- Ajoutez ici les boutons pour les actions que vous souhaitez réaliser, par exemple la modification ou la suppression -->
+                                                <td>
+                                                    <button type="submit" class="btn btn-warning">Modifier</button>
+                                                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                                                </td>
                                             </td>
                                         </tr>
                                         @endforeach
